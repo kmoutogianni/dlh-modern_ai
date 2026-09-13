@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-import requests
 """Module 0"""
+
+import requests
 
 
 def fetch_html(url, headers=None, timeout=10):
