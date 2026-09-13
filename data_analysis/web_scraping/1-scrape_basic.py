@@ -14,8 +14,8 @@ def scrape_basic(url):
   quotes = []
 
   for quote in quote_block:
-    text = quote[0].find('span', class_='text').text.strip()
-    author = quote[0].find('small', class_='text').text.strip()
+    text = quote.find('span', class_='text').text.strip()
+    author = quote.find('small', class_='author').text.strip()
     tags = quote.find_all('a', class_='tag').text.strip()
-    quotes.append({'text' = text, 'author' = author, 'tags'= tages}) 
+    quotes.append({'text' : text, 'author' : author, 'tags' : tags}) 
   return quotes
