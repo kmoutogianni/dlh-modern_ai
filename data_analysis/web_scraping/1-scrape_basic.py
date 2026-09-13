@@ -20,5 +20,5 @@ def scrape_basic(url):
         tags = []
         for tag in tag_list:
             tags.append(tag.text.strip())
-        quotes.append({'text': text, 'author': author, 'tags': tags}) 
+        quotes.append({'text': text, 'author': author, 'tags': tags})
     return quotes
