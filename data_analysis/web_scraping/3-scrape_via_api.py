@@ -12,13 +12,13 @@ def scrape_via_api(base_url):
     while True:    
         url = f"{base_url}/api/quotes?page={page_no}"
         array = json.loads(fetch_html(url))
-        if not array:
+        if not array["quotes"]:
             break
-        for dict in array:
+        for quote in array["quotes"]:
             quote_dict = {
-                "text": dict["text"],
-                "author": dict["author"]["name"],
-                "tags": dict["tags"]
+                "text": quote["text"],
+                "author": quote["author"]["name"],
+                "tags": quote["tags"]
             }
             result.append(quote_dict)
         page_no += 1
