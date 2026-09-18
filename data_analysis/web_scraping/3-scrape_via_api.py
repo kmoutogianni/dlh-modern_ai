@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module 3"""
 import json 
-import fetch_html = __import__('0-fetch_html').fetch_html
+fetch_html = __import__('0-fetch_html').fetch_html
 
 
 def scrape_via_api(base_url):
