@@ -11,8 +11,8 @@ def scrape_via_api(base_url):
     result = []
     while True:    
         url = f"{base_url}/api/quotes?page={page_no}"
-        response = fetch_html(url)
-        quotes = response.json()
+        quotes_string = fetch_html(url)
+        quotes = json.loads(quotes_string)
         if not quotes:
             break
         quote_dict = {
