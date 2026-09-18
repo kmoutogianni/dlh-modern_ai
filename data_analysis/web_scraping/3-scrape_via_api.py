@@ -17,8 +17,9 @@ def scrape_via_api(base_url):
         for dict in array:
             quote_dict = {
                 "text": dict["text"],
-                "author": dict["author"],
+                "author": dict["author"]["name"],
                 "tags": dict["tags"]
             }
-        result.append(quote_dict)
+            result.append(quote_dict)
+        page_no += 1
     return result
