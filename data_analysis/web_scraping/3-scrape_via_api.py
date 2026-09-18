@@ -9,7 +9,7 @@ def scrape_via_api(base_url):
     """fetches quote data from all the quotes' API pages"""
     page_no = 1
     result = []
-    while True:    
+    while True:
         url = f"{base_url}/api/quotes?page={page_no}"
         array = json.loads(fetch_html(url))
         if not array["quotes"]:
