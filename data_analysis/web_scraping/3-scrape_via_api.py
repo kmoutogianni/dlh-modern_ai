@@ -11,14 +11,14 @@ def scrape_via_api(base_url):
     result = []
     while True:    
         url = f"{base_url}/api/quotes?page={page_no}"
-        quotes_string = fetch_html(url)
-        quotes = json.loads(quotes_string)
-        if not quotes:
+        array = json.loads(fetch_html(url))
+        if not array:
             break
-        quote_dict = {
-            "text": quotes["text"],
-            "author": quotes["author"],
-            "tags": quotes["tags"]
-        }
+        for dict in array:
+            quote_dict = {
+                "text": dict["text"],
+                "author": dict["author"],
+                "tags": dict["tags"]
+            }
         result.append(quote_dict)
     return result
