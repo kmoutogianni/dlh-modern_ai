@@ -46,7 +46,7 @@ def scrape_product_detail(url, delay=2.0):
 
     stars = ratings.find_elements(
         webdriver.common.by.By.CSS_SELECTOR,
-        "p.ws-icon.ws-icon-star"
+        "span.ws-icon.ws-icon-star"
     )
     rating = len(stars)
 
