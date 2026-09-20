@@ -5,7 +5,7 @@ import time
 from selenium import webdriver
 
 
-def scroll_and_scrape(url, scroll_pause=2.0):
+def scroll_and_scrape(url, scroll_pause=0.5):
     """Scrolls through an infinite-scroll page and extracts all products."""
 
     options = webdriver.ChromeOptions()
