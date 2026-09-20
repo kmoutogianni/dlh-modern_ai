@@ -54,5 +54,5 @@ def scrape_products(url):
             "rating": rating
         })
   
-  driver.quit()
+      driver.quit()
   return products
