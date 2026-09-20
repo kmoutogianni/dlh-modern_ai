@@ -55,4 +55,4 @@ def scrape_products(url):
         })
   
       driver.quit()
-  return products
+      return products
