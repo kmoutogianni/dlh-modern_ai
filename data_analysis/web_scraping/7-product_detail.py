@@ -18,7 +18,7 @@ def scrape_product_detail(url, delay=2.0):
     driver.get(url)
     time.sleep(delay)
 
-   caption = driver.find_element(
+    caption = driver.find_element(
         webdriver.common.by.By.CSS_SELECTOR,
         ".caption"
     )
