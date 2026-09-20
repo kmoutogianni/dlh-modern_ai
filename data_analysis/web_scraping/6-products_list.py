@@ -18,10 +18,10 @@ def scrape_products(url):
     # create the driver
     driver = webdriver.Chrome(options=options)
     products = []
-    
+
     driver.get(url)
     time.sleep(1)
-    
+
     product_elements = driver.find_elements(
         webdriver.common.by.By.CSS_SELECTOR,
         "div.thumbnail"
@@ -57,6 +57,6 @@ def scrape_products(url):
             "description": description,
             "rating": rating
         })
-  
+
     driver.quit()
     return products
