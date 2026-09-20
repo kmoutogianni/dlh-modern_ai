@@ -18,13 +18,36 @@ def scrape_product_detail(url, delay=2.0):
     driver.get(url)
     time.sleep(delay)
 
-    caption_h4s = driver.find_elements_by_css_selector(".caption h4")
-    title = caption_h4s[1].text.strip() if len(caption_h4s) > 1 else ""
-    price_elem = driver.find_element_by_css_selector("h4.price")
-    price = price_elem.text.strip()
-    desc_elem = driver.find_element_by_css_selector("p.description")
-    description = desc_elem.text.strip()
-    stars = driver.find_elements_by_css_selector(".ratings p.ws-icon.ws-icon-star")
+   caption = driver.find_element(
+        webdriver.common.by.By.CSS_SELECTOR,
+        ".caption"
+    )
+
+    h4_elements = caption.find_elements(
+        webdriver.common.by.By.CSS_SELECTOR,
+        "h4"
+    )
+    title = h4_elements[1].text.strip()
+
+    price = driver.find_element(
+        webdriver.common.by.By.CSS_SELECTOR,
+        "h4.price"
+    ).text.strip()
+
+    description = driver.find_element(
+        webdriver.common.by.By.CSS_SELECTOR,
+        "p.description"
+    ).text.strip()
+
+    ratings = driver.find_element(
+        webdriver.common.by.By.CSS_SELECTOR,
+        ".ratings"
+    )
+
+    stars = ratings.find_elements(
+        webdriver.common.by.By.CSS_SELECTOR,
+        "p.ws-icon.ws-icon-star"
+    )
     rating = len(stars)
 
     driver.quit()
