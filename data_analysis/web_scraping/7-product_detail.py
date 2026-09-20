@@ -44,8 +44,6 @@ def scrape_product_detail(url, delay=2.0):
         ".ratings"
     )
 
-    print(ratings.get_attribute("innerHTML"))
-
     stars = ratings.find_elements(
         webdriver.common.by.By.CSS_SELECTOR,
         "p.ws-icon.ws-icon-star"
