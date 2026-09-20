@@ -59,7 +59,7 @@ def scroll_and_scrape(url, scroll_pause=0.5):
 
         description = elem.find_element(
             webdriver.common.by.By.CSS_SELECTOR,
-            "p.card-text description"
+            "p.description"
         ).text.strip()
 
         ratings = elem.find_element(
