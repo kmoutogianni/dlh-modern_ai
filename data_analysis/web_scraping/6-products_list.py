@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
+"""Module 6"""
 import time
 from selenium import webdriver
 
+
 def scrape_products(url):
-    """ Opens a static product category page in headless Chrome and returns a list of dictionaries with keys: 'title', 'price', 'description', 'rating'. """
+    """Opens a static product category page in headless Chrome and 
+    returns a list of dictionaries with keys: 
+    'title', 'price', 'description', 'rating'."""
 
     # create the options
     options = webdriver.ChromeOptions()
