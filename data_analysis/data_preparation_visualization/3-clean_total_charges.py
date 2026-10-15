@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """task 3"""
-import pandas as pd
 
 
 def clean_total_charges(df, method='drop'):
