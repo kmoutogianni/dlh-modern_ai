@@ -4,3 +4,4 @@
 
 def drop_customerID(df): 
     """removes the customerID column"""
+    return df.drop(columns=['customerID'])
