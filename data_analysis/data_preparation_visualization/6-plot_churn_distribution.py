@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """task 5"""
+import matplotlib.pyplot as plt
 
 
 def plot_churn_distribution(df):
