@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """task 1"""
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 def plot_missingness(df):
     """visualizes missing values"""
-    import matplotlib.pyplot as plt
-
     missing = df.isnull()
 
     for i, column in enumerate(df.columns):
