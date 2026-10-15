@@ -6,14 +6,9 @@ import matplotlib.pyplot as plt
 
 def plot_missingness(df):
     """visualizes missing values"""
-    missing = df.isnull()
-
     for i, column in enumerate(df.columns):
-        plt.scatter(
-            df.index[missing[column]],
-            [i] * missing[column].sum(),
-            marker='|'
-        )
+        rows = df.index[df[column].isnull()]
+        plt.scatter(rows, [i] * len(rows), marker='|')
 
     plt.yticks(range(len(df.columns)), df.columns)
     plt.show()
