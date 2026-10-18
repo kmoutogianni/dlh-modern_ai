@@ -9,3 +9,4 @@ def plot_churn_distribution(df):
     plt.ylabel('Count')
     plt.title('Churn Distribution')
     df['Churn'].value_counts().plot(kind='bar', color=['skyblue', 'salmon'])
+    plt.show()
