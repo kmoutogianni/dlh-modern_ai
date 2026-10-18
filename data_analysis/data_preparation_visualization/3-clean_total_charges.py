@@ -3,6 +3,8 @@
 
 
 def clean_total_charges(df, method='drop'):
+    df = df.copy()
+    
     if method == 'drop':
         df = df.dropna(subset=['TotalCharges'])
 
