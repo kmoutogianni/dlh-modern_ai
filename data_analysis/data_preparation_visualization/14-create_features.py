@@ -33,11 +33,10 @@ def create_features(df):
 
     # Drop original columns used and PhoneService
     columns_to_drop = service_columns + [
-    'InternetService',
-    'tenure',
-    'MultipleLines'
+        'InternetService',
+        'tenure',
+        'MultipleLines'
     ]
     df = df.drop(columns=columns_to_drop)
-
 
     return df
