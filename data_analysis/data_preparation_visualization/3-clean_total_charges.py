@@ -3,6 +3,11 @@
 
 
 def clean_total_charges(df, method='drop'):
+    """ handles missing values in TotalCharges:
+    'drop': Remove rows with missing TotalCharges
+    'median': Fill with column median
+    'impute': Replace with MonthlyCharges * tenure
+    """
     df = df.copy()
 
     if method == 'drop':
