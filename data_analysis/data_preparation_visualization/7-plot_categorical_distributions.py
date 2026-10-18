@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Task 7"""
+import matplotlib.pyplot as plt
 
 
 def plot_categorical_distributions(df, columns_to_plot=None):
