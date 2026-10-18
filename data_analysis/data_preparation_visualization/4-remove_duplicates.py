@@ -3,5 +3,5 @@
 
 
 def remove_duplicates(df):
-"""Removes duplicate rows from a DataFrame"""
-    return df.drop_duplicates(keep=False)
+    """Remove duplicate rows from a DataFrame."""
+    return df.drop_duplicates()
