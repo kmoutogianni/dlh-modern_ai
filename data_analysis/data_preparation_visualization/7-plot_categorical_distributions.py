@@ -23,14 +23,17 @@ def plot_categorical_distributions(df, columns_to_plot=None):
         df[column].value_counts().plot(
             kind='bar',
             ax=axes[i],
-            rot=45
+            rot=45,
+            width=(0.9)
         )
         axes[i].set_title(column)
         axes[i].set_xlabel('')
+        axes[i].margins(x=0)
 
     for i in range(len(columns_to_plot), len(axes)):
         fig.delaxes(axes[i])
 
     plt.tight_layout()
     plt.savefig("Task_7.png")
+    
     plt.show()
