@@ -17,9 +17,9 @@ def encode_features(df):
         'Partner', 'Dependents', 'PaperlessBilling', 'SeniorCitizen'
     ]
     ordinal_encoder = preprocessing.OrdinalEncoder(
-        categories=[['No', 'Yes']] * len(binary_columns)
+        categories=[['No', 'Yes']]
     )
-    df[binary_columns] = ordinal_encoder.fit_transform(df[binary_columns])
+    df[binary_columns] = ordinal_encoder, fit_transform(df[binary_columns]).astype(int)
 
     # One-hot encode Contract and PaymentMethod
     df = pd.get_dummies(
