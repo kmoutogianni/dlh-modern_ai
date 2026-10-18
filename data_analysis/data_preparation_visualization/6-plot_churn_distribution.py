@@ -8,5 +8,5 @@ def plot_churn_distribution(df):
     plt.figure(figsize=(12, 8))
     plt.ylabel('Count')
     plt.title('Churn Distribution')
-    df['Churn'].value_counts().plot(kind='bar', color=['skyblue', 'salmon'])
+    df['Churn'].value_counts().plot(kind='bar', color=['skyblue', 'salmon'], rot = 0)
     plt.show()
