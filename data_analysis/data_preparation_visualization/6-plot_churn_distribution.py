@@ -10,7 +10,7 @@ def plot_churn_distribution(df):
     plt.xlabel('')
     plt.title('Churn Distribution')
     df['Churn'].value_counts().plot(
-        kind='bar', 
-        color=['skyblue', 'salmon'], 
+        kind='bar',
+        color=['skyblue', 'salmon'],
         rot=0)
     plt.show()
