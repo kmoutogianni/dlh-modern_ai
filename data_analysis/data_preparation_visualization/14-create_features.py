@@ -8,6 +8,7 @@ def create_features(df):
     df = df.copy()
 
     service_columns = [
+        'MultipleLines',
         'OnlineSecurity',
         'OnlineBackup',
         'DeviceProtection',
