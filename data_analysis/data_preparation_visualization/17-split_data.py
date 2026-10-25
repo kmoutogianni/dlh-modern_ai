@@ -3,7 +3,7 @@
 from sklearn import model_selection
 
 
-def split_data(df, target='Churn', test_size=0.2, random_state=42): 
+def split_data(df, target='Churn', test_size=0.2, random_state=42):
     """ splits data into train/test sets"""
     X = df.drop(columns=[target])
     y = df[target]
