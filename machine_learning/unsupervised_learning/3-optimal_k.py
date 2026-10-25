@@ -9,4 +9,5 @@ def optimal_k(X, max_clusters, random_state):
     using silhouette scores to measure cluster cohesion and separation,
     and to compute the inertia to be used for the elbow method
     """
+    for i in range(2, max_clusters+1):
     
