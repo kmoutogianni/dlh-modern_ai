@@ -16,9 +16,7 @@ def encode_features(df):
     binary_columns = [
         'Partner', 'Dependents', 'PaperlessBilling', 'SeniorCitizen'
     ]
-    binary_encoder = preprocessing.OrdinalEncoder(
-       categories=[['No', 'Yes'], ['No', 'Yes'], ['No', 'Yes'], ['No', 'Yes']]
-    )
+    binary_encoder = preprocessing.OrdinalEncoder(categories=[['No', 'Yes']])
     df[binary_columns] = binary_encoder.fit_transform(
         df[binary_columns]
         ).astype(int)
