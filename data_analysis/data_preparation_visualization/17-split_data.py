@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Module 17"""
-from sklearn import preprocessing
+from sklearn import model_selection
 
 
 def split_data(df, target='Churn', test_size=0.2, random_state=42): 
