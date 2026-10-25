@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Module 15"""
-import pandas as pd
+"""Module 16"""
 from sklearn import preprocessing
 
 
