@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""Module 15"""
+import pandas as pd
+from sklearn import preprocessing
+
+
 def encode_features(df):
     """Encodes categorical features for modeling."""
     df = df.copy()
