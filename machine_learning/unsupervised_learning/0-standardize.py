@@ -5,6 +5,6 @@ from sklearn import preprocessing
 
 def Standardize(X):
     """standardizes tabular data using Scikit-learn"""
-scaler = preprocessing.StandardScaler()
-standardized_array = scaler.fit_transform(X)
-return standardized_array
+    scaler = preprocessing.StandardScaler()
+    standardized_array = scaler.fit_transform(X)
+    return standardized_array
