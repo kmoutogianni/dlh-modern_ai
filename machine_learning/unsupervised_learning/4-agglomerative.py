@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Task 3"""
+"""Task 4"""
+from sklearn import cluster
 from sklearn import metrics
-K_Means = __import__('2-k_means').K_Means
+Apply_PCA = __import__('1-pca').Apply_PCA
 
 
 def Agglomerative_Clustering(X, n_clusters, random_state, n_components, use_pca_data=True)
