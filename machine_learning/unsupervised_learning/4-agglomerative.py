@@ -6,8 +6,8 @@ Apply_PCA = __import__('1-pca').Apply_PCA
 
 
 def Agglomerative_Clustering(
-    X, n_clusters, random_state, n_components, 
-    use_pca_data=True):
+        X, n_clusters, random_state, n_components,
+        use_pca_data=True):
     """performs Agglomerative hierarchical clustering"""
 
     if use_pca_data is True:
