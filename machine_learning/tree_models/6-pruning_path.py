@@ -3,7 +3,7 @@
 
 
 def get_pruning_path(clf, X, y):
-    """retrieves the cost-complexity pruning path 
+    """retrieves the cost-complexity pruning path
     for a given decision tree classifier"""
 
     path = clf.cost_complexity_pruning_path(X, y)
@@ -12,4 +12,3 @@ def get_pruning_path(clf, X, y):
     impurities = path.impurities
 
     return ccp_alphas, impurities
-  
