@@ -4,7 +4,7 @@ from sklearn import tree
 train_tree = __import__('1-train').train_tree
 
 
-def rune_and_evaluate_trees(
+def prune_and_evaluate_trees(
     X_train, y_train, X_test, y_test,
     ccp_alphas, random_state,
     min_samples_leaf, min_samples_split):
