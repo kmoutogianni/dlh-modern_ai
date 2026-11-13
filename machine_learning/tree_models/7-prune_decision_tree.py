@@ -8,8 +8,8 @@ def prune_and_evaluate_trees(
     X_train, y_train, X_test, y_test,
     ccp_alphas, random_state,
     min_samples_leaf, min_samples_split):
-    """analyze how different pruning strengths affect model complexity and performance"""
-    
+"""analyze how different pruning strengths affect model complexity and performance"""
+
     clfs = []
     train_scores = []
     test_scores = []
@@ -29,4 +29,3 @@ def prune_and_evaluate_trees(
         test_scores.append(clf.score(X_test, y_test))
 
     return clfs, train_scores, test_scores
-  
