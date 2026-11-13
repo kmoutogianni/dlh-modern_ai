@@ -9,7 +9,7 @@ def prune_and_evaluate_trees(
     ccp_alphas, random_state,
     min_samples_leaf, min_samples_split
 ):
-    """analyze how different pruning strengths 
+    """analyze how different pruning strengths
     affect model complexity and performance"""
 
     clfs = []
