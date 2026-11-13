@@ -17,4 +17,3 @@ def prepruning(X, y, clf):
     grid_search.fit(X, y)
 
     return grid_search.best_params_
-  
