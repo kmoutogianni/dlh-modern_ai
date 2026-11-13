@@ -16,7 +16,6 @@ def rune_and_evaluate_trees(
 
     for alpha in ccp_alphas:
         clf = tree.DecisionTreeClassifier(
-            criterion='gini',
             random_state=random_state,
             min_samples_leaf=min_samples_leaf,
             min_samples_split=min_samples_split,
