@@ -4,8 +4,8 @@ from sklearn import ensemble
 
 
 def random_forest(n_estimators, random_state):
-"""creates a random forest classifier"""
+    """creates a random forest classifier"""
     model = ensemble.RandomForestClassifier(
-        n_estimators=n_estimators, random_state
+        n_estimators=n_estimators, random_state=random_state
     )
     return model
