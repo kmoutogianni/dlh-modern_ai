@@ -6,7 +6,7 @@ import lightgbm as lgb
 
 
 def compare_boosting_classifiers(name, n_estimators, random_state):
-    """initializes and returns an untrained boosting classifier 
+    """initializes and returns an untrained boosting classifier
     based on the specified algorithm name"""
 
     if name == 'adaboost':
