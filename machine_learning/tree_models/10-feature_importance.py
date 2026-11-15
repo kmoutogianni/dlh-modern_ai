@@ -8,5 +8,5 @@ def feature_importance(rf):
     from a trained random forest model"""
 
     importances = rf.feature_importances_
-    indices= np.argsort(importances)
-      
+    indices = np.argsort(importances)
+    return importances, indices
