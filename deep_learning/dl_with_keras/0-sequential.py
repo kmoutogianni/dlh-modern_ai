@@ -3,12 +3,13 @@
 from tensorflow import keras
 
 
-def build_model(input_dim, neuros_h):
-    """creates a shallow neural network with a single hidden layer"""
-    model = keras.sequential([
-        keras.layers.Input(shape=(input_dim,)),
-        keras.layers.Dense(neurons_h, activation='sigmoid'),
-        keras.layers.Dense(3, activation='softmax')
+def build_model(input_dim, neurons_h):
+    """Build a shallow neural network"""
+
+    model = keras.Sequential([
+        keras.layers.Dense(neurons_h, activation='sigmoid',
+                           input_shape=(input_dim,)),
+        keras.layers.Dense(10, activation='softmax')
     ])
 
-    return model  
+    return model
