@@ -6,7 +6,7 @@ from tensorflow import keras
 def compile_model(model, learning_rate=0.01):
     """configures the keras model for training"""
 
-    optimizer = tf.keras.optimizers.SGD(
+    optimizer = keras.optimizers.SGD(
         learning_rate=learning_rate
     )
 
