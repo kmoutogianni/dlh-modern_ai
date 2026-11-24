@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """module 3"""
-from tensorflow import keras
 
 
 def train_model(model, X, Y, epochs, verbose=1):
