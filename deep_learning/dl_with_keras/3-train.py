@@ -4,4 +4,4 @@
 
 def train_model(model, X, Y, epochs, verbose=1):
     """trains a Keras model"""
-    model.fit(X, Y, epochs = epochs, verbose = verbose)
+    model.fit(X, Y, epochs=epochs, verbose=verbose)
