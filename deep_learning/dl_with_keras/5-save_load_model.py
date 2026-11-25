@@ -10,4 +10,4 @@ def save_model(model, filepath):
 
 def load_model(filepath):
     """loads a saved Keras model"""
-    keras.models.load_model(filepath)
+    return keras.models.load_model(filepath)
