@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """module 6"""
-from tensorflow import keras
 
 
 def save_model_weights(model, filepath):
